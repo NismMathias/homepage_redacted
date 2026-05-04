@@ -1,0 +1,160 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services/
+
+- Primary Datacenter:
+    - Proxmox:
+        icon: proxmox.png
+        href: 
+        description: Primary Datacenter
+        widget:
+          type: proxmox
+          url: 
+          username: 
+          password: 
+          node: 
+    - Audiobookshelf:
+        icon: audiobookshelf.png
+        href: 
+        siteMonitor: 
+        description: AudiobookShelf Host
+        widget:
+          type: audiobookshelf
+          url: 
+          key: 
+    - Plex:
+        icon: plex.png
+        href: 
+        siteMonitor: 
+        description: Plex Host
+        widget:
+          type: plex
+          url: 
+          key: 
+    - RustDesk:
+        icon: rustdesk.png
+        href: 
+        description: RustDesk Host
+
+- Secondary Datacenter:
+     - Proxmox:
+        icon: proxmox.png
+        href: 
+        description: Secondary Datacenter
+        widget:
+          type: proxmox
+          url: 
+          username: 
+          password: 
+          node: 
+     - Minecraft:
+        icon: minecraft.png
+        href: 
+        description: Minecraft Server
+        widget:
+          type: gamedig
+          serverType: minecraftbe
+          url: 
+
+- Tertiary Datacenter:
+      - Proxmox:
+         icon: proxmox.png
+         href: 
+         description: Tertiary Datacenter
+         widget:
+           type: proxmox
+           url: 
+           username: 
+           password: 
+           node: 
+      - Grafana:
+         icon: grafana.png
+         href: 
+         widget:
+           type: grafana
+           version: 2 # optional, default is 1
+           alerts: grafana # optional, default is grafana
+           url: 
+           username: 
+           password: 
+      - Prometheus:
+         icon: prometheus.png
+         href: 
+         widget:
+           type: prometheus
+           url: 
+
+- Pi Cluster:
+    - Pi Manager:
+        icon: raspberry-pi.png
+        href: https://connect.raspberrypi.com/devices
+        siteMonitor: https://connect.raspberrypi.com/devices
+    - PiOne:
+        icon: uptime-kuma.png
+        href: 
+        description: PiOne - Uptime Kuma
+        widget:
+          type: uptimekuma
+          url: 
+          slug: situationroom
+    - PiTwo:
+        icon: raspberry-pi.png
+        href: https://connect.raspberrypi.com/devices
+        description: available
+    - PiThree:
+        icon: jellyfin.png
+        href: 
+        description: Jellyfin
+        widget:
+          type: jellyfin
+          url: 
+          key: 
+          version: 1 # optional, default is 1
+          enableBlocks: true # optional, defaults to false
+          enableNowPlaying: true # optional, defaults to true
+          enableUser: false # optional, defaults to false
+          enableMediaControl: false # optional, defaults to true
+          showEpisodeNumber: true # optional, defaults to false
+          expandOneStreamToTwoRows: false # optional, defaults to true
+    - PiFour:
+        icon: unifi.png
+        href: 
+        siteMonitor: 
+        description: Unifi OS
+    - PiFive:
+        icon: home-assistant.png
+        href: 
+        description: Home Assistant
+- Data Plane:
+    - UNAS PRO:
+        icon: ubiquiti
+        href: 
+        siteMonitor: 
+        widget:
+          type: unifi_drive
+          url: 
+          username: 
+          password: 
+    - NVR:
+        icon: ubiquiti.png
+        href: 
+        siteMonitor: 
+    - Synology:
+        icon: synology.png
+        href: 
+        widget:
+          type: diskstation
+          icon: synology.png
+          href: 
+          url: 
+          username: 
+          password: 
+    - Cloudflare:
+        icon: cloudflare.png
+        href: <Cloudflare URL>
+        siteMonitor: <Cloudflare URL>
+        widget:
+          type: cloudflared
+          accountid: <accountid> # from zero trust dashboard url e.g. https://one.dash.cloudflare.com/<accountid>/home/quick-start
+          tunnelid: <tunnelid> # found in tunnels dashboard under the tunnel name
+          key: <key> # api token with `Account.Cloudflare Tunnel:Read` https://dash.cloudflare.com/profile/api-tokens
